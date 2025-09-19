@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RooPredict - Advanced Roulette Prediction Tool</title>
+    <meta name="description" content="RooPredict is a sophisticated roulette prediction tool that analyzes dealer patterns to help you make more informed decisions. Educational and entertainment purposes only.">
+    <meta name="keywords" content="roulette, prediction, casino, gambling, statistics, pattern, analysis, dealer, strategy, probability">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        
+        .main-content {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+        
+        .app-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .info-card h3 {
+            color: #2E7D32;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .features {
+            margin: 40px 0;
+        }
+        
+        .features h2 {
+            color: #2E7D32;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .feature {
+            background: #e8f5e8;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .disclaimer {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            border-left: 4px solid #f39c12;
+        }
+        
+        .disclaimer h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .download-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .download-btn:hover {
+            background: #45a049;
+        }
+        
+        .download-btn.coming-soon {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .legal-links {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .legal-links a {
+            color: #2E7D32;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+        
+        .legal-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 30px 0;
+            opacity: 0.8;
+        }
+        
+        .contact-info {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .contact-info h3 {
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .main-content {
+                padding: 20px;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .download-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">🎰 RooPredict</div>
+            <div class="tagline">Advanced Roulette Prediction Tool</div>
+            <p>Statistical analysis for informed decisions • Educational & Entertainment purposes only</p>
+        </header>
+        
+        <main class="main-content">
+            <div class="app-info">
+                <div class="info-card">
+                    <h3>📊 Statistical Analysis</h3>
+                    <p>RooPredict uses advanced algorithms to analyze dealer patterns and provide statistical insights for roulette enthusiasts.</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>🔒 Privacy First</h3>
+                    <p>All data is stored locally on your device. No personal information is collected or transmitted to external servers.</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>📱 Offline & Private</h3>
+                    <p>Works completely offline. No internet connection required. Your data stays on your device.</p>
+                </div>
+            </div>
+            
+            <div class="features">
+                <h2>Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">🎯</div>
+                        <h4>Pattern Analysis</h4>
+                        <p>Track dealer patterns and spin history</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">📈</div>
+                        <h4>Real-time Statistics</h4>
+                        <p>Advanced statistical analysis after 15+ spins</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">🎲</div>
+                        <h4>Dual Roulette Support</h4>
+                        <p>American and European roulette variants</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">🎨</div>
+                        <h4>Beautiful Interface</h4>
+                        <p>Casino-style design with intuitive controls</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="disclaimer">
+                <h3>⚠️ Important Disclaimer</h3>
+                <p><strong>RooPredict is for entertainment and educational purposes only.</strong> This app provides statistical analysis only. Roulette is a game of chance, and no prediction can guarantee wins. Always gamble responsibly and within your means. This app does not facilitate real money gambling.</p>
+            </div>
+            
+            <div class="download-section">
+                <h2>Download RooPredict</h2>
+                <p>Available soon on the App Store and Google Play Store</p>
+                <div class="download-buttons">
+                    <a href="#" class="download-btn coming-soon">📱 App Store (Coming Soon)</a>
+                    <a href="#" class="download-btn coming-soon">🤖 Google Play (Coming Soon)</a>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <h3>📞 Contact Information</h3>
+                <p><strong>Support:</strong> support@roopredict.com</p>
+                <p><strong>Privacy:</strong> privacy@roopredict.com</p>
+                <p><strong>Legal:</strong> legal@roopredict.com</p>
+            </div>
+            
+            <div class="legal-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="mailto:support@roopredict.com">Contact Us</a>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>&copy; 2024 RooPredict. All rights reserved.</p>
+            <p>Educational and entertainment purposes only. Gambling involves risk.</p>
+        </footer>
+    </div>
+</body>
+</html>
